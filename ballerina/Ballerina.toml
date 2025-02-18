@@ -18,7 +18,7 @@ artifactId = "aws.marketplace.mpm-native"
 version = "0.2.0-SNAPSHOT"
 path = "../native/build/libs/aws.marketplace.mpm-native-0.2.0-SNAPSHOT.jar"
 
-[[platform.java17.dependency]]
+[[platform.java21.dependency]]
 groupId = "io.ballerina.stdlib"
 artifactId = "time-native"
 version = "2.6.0"
