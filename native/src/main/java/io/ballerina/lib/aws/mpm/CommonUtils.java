@@ -179,7 +179,7 @@ public final class CommonUtils {
         bUsageRecord.put(Constants.MPM_USAGE_RECORD_CUSTOMER_IDFR,
                 StringUtils.fromString(nativeUsageRecord.customerIdentifier()));
         bUsageRecord.put(Constants.MPM_USAGE_RECORD_DIMENSION, StringUtils.fromString(nativeUsageRecord.dimension()));
-        bUsageRecord.put(Constants.MPM_USAGE_RECORD_TIMESTAMP, new Utc(nativeUsageRecord.timestamp()));
+        bUsageRecord.put(Constants.MPM_USAGE_RECORD_TIMESTAMP, new Utc(nativeUsageRecord.timestamp()).build());
         Integer quantity = nativeUsageRecord.quantity();
         if (Objects.nonNull(quantity)) {
             bUsageRecord.put(Constants.MPM_USAGE_RECORD_QUANTITY, quantity);
