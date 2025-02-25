@@ -47,7 +47,7 @@ public isolated client class Client {
     # 
     # + registrationToken - The registration-token provided by the customer
     # + return - A Ballerina `mpm:Error` if there was an error while executing the operation or else `mpm:ResolveCustomerResponse`
-    isolated remote function resolveCustomer(string registrationToken) returns ResolveCustomerResponse|Error =
+    remote function resolveCustomer(string registrationToken) returns ResolveCustomerResponse|Error =
     @java:Method {
         'class: "io.ballerina.lib.aws.mpm.NativeClientAdaptor"
     } external;
@@ -59,7 +59,7 @@ public isolated client class Client {
     # 
     # + request - The request parameters for the `BatchMeterUsage` operation
     # + return - A Ballerina `mpm:Error` if there was an error while executing the operation or else `mpm:BatchMeterUsageResponse`
-    isolated remote function batchMeterUsage(*BatchMeterUsageRequest request) returns BatchMeterUsageResponse|Error {
+    remote function batchMeterUsage(*BatchMeterUsageRequest request) returns BatchMeterUsageResponse|Error {
         BatchMeterUsageRequest|constraint:Error validated = constraint:validate(request);
         if validated is constraint:Error {
             return error Error(string `Request validation failed: ${validated.message()}`);
